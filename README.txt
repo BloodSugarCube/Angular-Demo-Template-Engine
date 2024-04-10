@@ -7,3 +7,4 @@
 
 * В случае Windows для команд можно использовать cmd или Windows PowerShell.
 * С вопросами - telegram @bloodsugarcube .
+* В качестве сайта-шаблона использован результат проекта с генератором статических сайтов - Hugo, проект с ним здесь - https://github.com/BloodSugarCube/Hugo-Demo-Hotel .
