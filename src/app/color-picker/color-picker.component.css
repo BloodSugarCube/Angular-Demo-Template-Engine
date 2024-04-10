@@ -1,0 +1,36 @@
+.cell-container {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: auto auto;
+    width: 146px;
+    height: 146px;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0.85px 3px 0px #00000030;
+    box-shadow: 0px 0.25px 1px 0px #0000000A;
+    border: none;
+    /* Скошенные углы */
+    clip-path: polygon(10% 0%, 90% 0%,
+            100% 10%, 100% 90%,
+            90% 100%, 10% 100%,
+            0% 90%, 0% 10%);
+}
+
+.cell {
+    display: block;
+    width: 56px;
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid var(--interface-accent-color, #000000);
+    border-radius: 5px;
+}
+
+.cell:hover {
+    border-width: 3px;
+}
+
+.cell_active {
+    border: 3px solid #FF5722;
+}

@@ -1,0 +1,121 @@
+/** Глобальные или не компонентные стили */
+:root {
+    --main-bg-color: #EAEAEA;
+    --main-text-color: #000000;
+    --interface-accent-color-rgb: 63, 81, 181;
+    --interface-accent-color: rgb(var(--interface-accent-color-rgb));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    padding: 0% 6% 0% 6%;
+}
+
+h1 {
+    font-family: 'inter-bold';
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+.progress-bar {
+    height: 4px;
+    width: 100%;
+    background-color: rgba(var(--interface-accent-color-rgb), 0.12);
+}
+
+.progress-bar__fill {
+    height: inherit;
+    width: 85px;
+    background-color: var(--interface-accent-color);
+}
+
+.element-container {
+    padding: 0px 0px 20px 0px;
+}
+
+.button {
+    display: flex;
+    align-content: center;
+    border: 0;
+    background-color: var(--interface-accent-color);
+    font-family: 'roboto-regular';
+    font-size: 14px;
+    color: #FFFFFF;
+    height: 41px;
+    width: 334px;
+    padding: 1px 20% 1px 8px;
+    padding: 0px 16px 0px 16px;
+    gap: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgba(var(--interface-accent-color-rgb), 0.8);
+}
+
+.button:active {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px 10px 0px;
+}
+
+.input {
+    width: 332px;
+    height: 49px;
+    padding: 8px 12px 8px 12px;
+    gap: 10px;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 0px 1px 5px 0px #0000001F;
+    box-shadow: 0px 2px 2px 0px #00000024;
+    box-shadow: 0px 1px 1px 0px #00000033;
+}
+
+.input::placeholder {
+    color: #000000DE;
+    font-family: 'roboto-regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.input-label {
+    font-family: 'roboto-regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+/** Шрифты */
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url('assets/fonts/inter/Inter-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

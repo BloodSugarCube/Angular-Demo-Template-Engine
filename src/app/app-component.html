@@ -1,0 +1,20 @@
+<div class="iframe-container">
+    <iframe-site (isLoad)="syncColors()"></iframe-site>
+</div>
+<div class="progress-bar">
+    <div class="progress-bar__fill"></div>
+</div>
+
+<div class="color-picker-container">
+    <color-picker (selectColor)="changeSiteText($event)" [id]="ID_COLOR_PICKER_TEXT"></color-picker>
+    <button (click)="randomSiteText()" class="button">ИЗМЕНИТЬ ЦВЕТ ТЕКСТА</button>
+</div>
+
+<div class="progress-bar">
+    <div class="progress-bar__fill"></div>
+</div>
+
+<div class="color-picker-container">
+    <color-picker (selectColor)="changeSiteBackground($event)" [id]="ID_COLOR_PICKER_BACKGROUND"></color-picker>
+    <button (click)="randomSiteBackground()" class="button">ИЗМЕНИТЬ ЦВЕТ ФОНА</button>
+</div>

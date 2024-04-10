@@ -1,0 +1,3 @@
+<button [class]="CLASS_CELL_CONTAINER" on-click="newColors($event)">
+    <button #cell *ngFor="let color of INIT_COLORS" class="cell" [style.backgroundColor]="color" on-click="select($event)"></button>
+</button>

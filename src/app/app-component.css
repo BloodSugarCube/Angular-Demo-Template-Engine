@@ -1,0 +1,15 @@
+:host {
+    width: 100%;
+}
+
+.iframe-container {
+    padding: 0px 0px 20px 0px;
+}
+
+.color-picker-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0px 60px 0px;
+    height: 246px;
+}

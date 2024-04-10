@@ -1,0 +1,1 @@
+console.log("This site is generated with the help of hugo!");

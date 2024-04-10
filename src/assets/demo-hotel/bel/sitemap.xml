@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:4200/assets/demo-hotel/bel/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cez"
+                href="http://localhost:4200/assets/demo-hotel/cez/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-gb"
+                href="http://localhost:4200/assets/demo-hotel/en-gb/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-ru"
+                href="http://localhost:4200/assets/demo-hotel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="bel"
+                href="http://localhost:4200/assets/demo-hotel/bel/"
+                />
+  </url>
+</urlset>
