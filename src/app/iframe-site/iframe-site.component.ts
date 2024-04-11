@@ -11,8 +11,6 @@ export class FrameSite {
     readonly SITE_BACKGROUND_PROPERTY: string = '--main-bg-color';
     readonly SITE_TEXT_PROPERTY: string = '--main-text-color';
 
-    private
-
     private src: string = "http://localhost:4200/assets/demo-hotel";
     safeUrl: SafeResourceUrl;
     @ViewChild('iframe', { static: false }) private iframe: ElementRef;

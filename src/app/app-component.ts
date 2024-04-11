@@ -1,7 +1,6 @@
-import { Component, Input, AfterViewInit, ViewChild, ViewChildren, AfterViewChecked, OnInit, AfterContentInit, AfterContentChecked } from "@angular/core";
+import { Component, ViewChild, ViewChildren } from "@angular/core";
 import { ColorPicker } from "./color-picker/color-picker.component";
 import { FrameSite } from "./iframe-site/iframe-site.component";
-import { AppModule } from "./app-module";
 
 @Component({
     selector: 'app-component',
