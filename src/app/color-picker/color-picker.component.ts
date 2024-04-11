@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, Output, QueryList, ViewChildren, EventEmitter } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: "color-picker",
@@ -15,9 +14,9 @@ export class ColorPicker {
     readonly INIT_COLORS: string[] = [ColorPicker.randomColor, ColorPicker.randomColor, ColorPicker.randomColor, ColorPicker.randomColor];
 
     @Input() id: string;
-    @Output() selectColor = new EventEmitter<string>();
-
     @ViewChildren('cell') cells: QueryList<ElementRef>;
+
+    @Output() selectColor = new EventEmitter<string>();
 
     public newColors(event: Event): void {
         let targetElement: HTMLElement = event.target as HTMLElement;
@@ -33,7 +32,7 @@ export class ColorPicker {
         }
     }
 
-    select(event: Event): void {
+    public select(event: Event): void {
         let targetCell: HTMLElement = event.target as HTMLElement;
 
        this.resetActiveColor();
@@ -48,9 +47,10 @@ export class ColorPicker {
         }
     }
 
-    initSelectedColor(color: string, cellNumber: number): void {
+    public initSelectedColor(color: string, cellNumber: number): void {
         let cell: ElementRef | null = null;
 
+        // Обратиться по индексу this.cells[cellNumber] в данном случае не получится
         this.cells.forEach((cellRef: ElementRef, index: number) => {
             if (index == cellNumber) {
                 cell = cellRef;

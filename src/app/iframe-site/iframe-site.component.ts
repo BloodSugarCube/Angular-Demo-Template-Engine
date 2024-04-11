@@ -12,11 +12,13 @@ export class FrameSite {
     readonly SITE_TEXT_PROPERTY: string = '--main-text-color';
 
     private src: string = "http://localhost:4200/assets/demo-hotel";
-    safeUrl: SafeResourceUrl;
+    public safeUrl: SafeResourceUrl;
+    
     @ViewChild('iframe', { static: false }) private iframe: ElementRef;
+
     @Output() isLoad = new EventEmitter<true>();
 
-    onLoad(event: Event) {
+    public onLoad(event: Event): void {
         this.isLoad.emit(true);
     }
 

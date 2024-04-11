@@ -17,10 +17,11 @@ export class AppComponent {
     @ViewChild(FrameSite) frame: FrameSite;
     @ViewChildren(ColorPicker) colorPickers: ColorPicker[];
 
-    syncColors() {
+    public syncColors(): void {
         for (let colorPicker of this.colorPickers) {
             if (colorPicker.id === this.ID_COLOR_PICKER_BACKGROUND) {
                 colorPicker.initSelectedColor(this.frame.backgroundColor, 1);
+                continue;
             }
             if (colorPicker.id === this.ID_COLOR_PICKER_TEXT) {
                 colorPicker.initSelectedColor(this.frame.textColor, 1);
@@ -28,12 +29,12 @@ export class AppComponent {
         }
     }
 
-    randomSiteBackground() {
+    public randomSiteBackground(): void {
         this.frame.backgroundColor = ColorPicker.randomColor;
         this.syncColors();
     }
 
-    randomSiteText() {
+    public randomSiteText(): void {
         this.frame.textColor = ColorPicker.randomColor;
         this.syncColors();
     }
@@ -44,9 +45,5 @@ export class AppComponent {
 
     public changeSiteText(color: string): void {
         this.frame.textColor = color;
-    }
-
-    log() {
-        console.log(this.frame.backgroundColor);
     }
 }
